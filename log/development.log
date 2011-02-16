@@ -2107,3 +2107,13 @@ Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:24:42 -0200
   [1m[35mFoto Load (0.4ms)[0m  SELECT "fotos".* FROM "fotos"
 Rendered fotos/index.html.erb within layouts/application (42.5ms)
 Completed 200 OK in 56ms (Views: 46.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 18:59:41 -0200
+
+Errno::ENOENT (No such file or directory - /Users/luciannaalmeida/Projetos/primeiro/config/locales/en.yml):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
