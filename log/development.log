@@ -1,0 +1,2109 @@
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (1.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateFotos (20110216162323)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "fotos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110216162323')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("fotos")
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-16 14:33:38 -0200
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-16 14:37:57 -0200
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2011-02-16 15:00:04 -0200
+
+ActionController::RoutingError (No route matches "/photos"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 15:00:32 -0200
+
+AbstractController::ActionNotFound (The action 'index' could not be found for FotosController):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 15:01:11 -0200
+  Processing by FotosController#index as HTML
+Completed   in 41ms
+
+ActionView::MissingTemplate (Missing template fotos/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 15:01:24 -0200
+  Processing by FotosController#index as HTML
+Completed   in 3ms
+
+ActionView::MissingTemplate (Missing template fotos/index with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 15:01:43 -0200
+  Processing by FotosController#index as HTML
+Rendered fotos/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:02:14 -0200
+
+AbstractController::ActionNotFound (The action 'show' could not be found for FotosController):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:02:34 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 4ms
+
+ActionView::MissingTemplate (Missing template fotos/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:03:19 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 5ms
+
+NameError (uninitialized constant FotosController::Foto):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateFotos (20110216162323)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (28.6ms)[0m  [1mDROP TABLE "fotos"[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110216162323'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:11:38 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 49ms
+
+NoMethodError (undefined method `eq' for nil:NilClass):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:11:57 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFoto Load (0.4ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+SQLite3::SQLException: no such table: fotos: SELECT "fotos".* FROM "fotos"
+Completed   in 7ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: fotos: SELECT "fotos".* FROM "fotos"):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateFoto (20110216162323)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.7ms)[0m  [1mCREATE TABLE "foto" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110216162323')
+Migrating to CreateFotos (20110216171052)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "fotos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110216171052')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("foto")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("fotos")[0m
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:12:37 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Completed   in 23ms
+
+ActionView::MissingTemplate (Missing template fotos/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.7ms)
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:12:45 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFoto Load (0.1ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 1 LIMIT 1
+Completed   in 37ms
+
+ActiveRecord::RecordNotFound (Couldn't find Foto with ID=1):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 15:13:43 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFoto Load (0.1ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 1 LIMIT 1
+Completed   in 9ms
+
+ActiveRecord::RecordNotFound (Couldn't find Foto with ID=1):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:13:52 -0200
+  Processing by FotosController#new as HTML
+Completed   in 3ms
+
+ActionView::MissingTemplate (Missing template fotos/new with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:14:01 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/new.html.erb within layouts/application (6.1ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `text_input' for #<ActionView::Helpers::FormBuilder:0x00000100ab26c8>):
+    1: <% form_for :foto do |f|%>
+    2:   <%= f.text_input :name%>  
+    3: 
+    4:    %= f.submit
+    5: <%end%>
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__29402642283498364_2153141680_2863074907189934205'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__29402642283498364_2153141680_2863074907189934205'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.5ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:14:46 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155538160_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:14:53 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155667560_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:14:59 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154935260_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:15:09 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168717480_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos/new" for 127.0.0.1 at 2011-02-16 15:15:41 -0200
+
+ActionController::RoutingError (No route matches "/fotos/new"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:16:10 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:16:13 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:16:21 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168645160_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:17:06 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155307580_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos/new" for 127.0.0.1 at 2011-02-16 15:17:08 -0200
+
+ActionController::RoutingError (No route matches "/fotos/new"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:17:59 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154206500_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:19:47 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2156813100_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:19:50 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155131860_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:19:50 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154250180_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:19:56 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168471360_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:25:16 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155123660_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 15:28:49 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"praia"}, "commit"=>"Save Foto"}
+Completed   in 39ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: name):
+  app/controllers/fotos_controller.rb:15:in `new'
+  app/controllers/fotos_controller.rb:15:in `create'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 15:33:04 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155463740_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 15:33:47 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"praia"}, "commit"=>"Save Foto"}
+Completed   in 10ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: name):
+  app/controllers/fotos_controller.rb:14:in `new'
+  app/controllers/fotos_controller.rb:14:in `create'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateFotos (20110216171052)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (65.1ms)[0m  [1mDROP TABLE "fotos"[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20110216171052'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("foto")
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateFotos (20110216171052)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "fotos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110216171052')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("foto")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("fotos")[0m
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 15:37:37 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"praia"}, "commit"=>"Save Foto"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "fotos" ("name", "created_at", "updated_at") VALUES ('praia', '2011-02-16 17:37:37.942786', '2011-02-16 17:37:37.942786')
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155625860_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (30.5ms)
+Completed 200 OK in 64ms (Views: 34.9ms | ActiveRecord: 0.6ms)
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFoto Load (0.2ms)[0m  SELECT "fotos".* FROM "fotos"
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 16:21:29 -0200
+  Processing by FotosController#index as HTML
+Rendered fotos/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:21:34 -0200
+  Processing by FotosController#new as HTML
+ERROR: compiling _app_views_fotos_new_html_erb__29402642283498364_2155721100_2863074907189934205 RAISED /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1: syntax error, unexpected ':', expecting keyword_end
+...tring=  form_for :foto, @foto :url => fotos_path, do |f|
+...                               ^
+/Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_fotos_new_html_erb__29402642283498364_2155721100_2863074907189934205(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "fotos/new";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append_if_string=  form_for :foto, @foto :url => fotos_path, do |f|
+@output_buffer.safe_concat('	');@output_buffer.append= ( render :partial => "form", :locals => {:f => f}, );@output_buffer.safe_concat('
+');end          
+@output_buffer.safe_concat('                                       
+
+
+');@output_buffer.append_if_string=  #form_for :user, @user, :url => user_path, :html => { :multipart => true } do |form| 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `module_eval'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_view/template.rb:255:in `compile'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `block in render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/luciannaalmeida/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:435:in `_run__2616294982428298418__process_action__1266443739333688224__callbacks'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `block in action'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/luciannaalmeida/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/luciannaalmeida/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/luciannaalmeida/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered fotos/new.html.erb within layouts/application (27.1ms)
+Completed   in 43ms
+
+ActionView::Template::Error (/Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1: syntax error, unexpected ':', expecting keyword_end
+...tring=  form_for :foto, @foto :url => fotos_path, do |f|
+...                               ^
+/Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting $end):
+    1: <% form_for :foto, @foto :url => fotos_path, do |f|%>
+    2: 	<%= render :partial => "form", :locals => {:f => f}, %>
+    3: <%end%>          
+    4:                                        
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:21:45 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_fotos_new_html_erb__29402642283498364_2154315620_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/_form.html.erb (0.8ms)
+Rendered fotos/new.html.erb within layouts/application (3.2ms)
+Completed   in 18ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>  
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb__3656279321283199353_2154250360__222010949226861185'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__29402642283498364_2154315620_2863074907189934205'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__29402642283498364_2154315620_2863074907189934205'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:22:04 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from _app_views_fotos_new_html_erb__29402642283498364_2156351560_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/_form.html.erb (1.3ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2156351560_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2156351560_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:22:48 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154699640_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154699640_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:22:49 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2156472700_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2156472700_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154752960_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154752960_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:10 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168483920_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168483920_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:10 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154922540_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154922540_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:10 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168603620_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168603620_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 49ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:10 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155045660_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155045660_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 19ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:13 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168687960_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2168687960_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 48ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 16:23:16 -0200
+  Processing by FotosController#index as HTML
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:20 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154242280_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154242280_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:23:44 -0200
+  Processing by FotosController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155556020_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155556020_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:24:04 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154452780_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154452780_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:24:36 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155503540_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2155503540_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 19ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:24:37 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154342580_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__29402642283498364_2154342580_2863074907189934205 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 20ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:24:56 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (2.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160654400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160654400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:24:57 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162721980_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162721980_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 41ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:25 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161647780_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161647780_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:26 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161623900_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161623900_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:43 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162001700_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162001700_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:44 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161139060_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161139060_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:44 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162752980_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162752980_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:45 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161981320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161981320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:45 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161137400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161137400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:45 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162752200_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162752200_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:25:45 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (1.0ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161980220_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161980220_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:26:31 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161075960_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161075960_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:04 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162574680_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162574680_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161774900_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161774900_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160895400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160895400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162553260_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162553260_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (1.0ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161768780_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161768780_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:24 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160878420_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160878420_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:25 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162517120_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162517120_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:26 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161737360_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161737360_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:26 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160860360_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160860360_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:26 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162516960_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162516960_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:26 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161737260_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161737260_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:27:26 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160860680_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160860680_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:28:14 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162419480_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162419480_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:28:14 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161629100_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161629100_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:28:15 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160766500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160766500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:28:15 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (1.0ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162417800_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162417800_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:29:52 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161582820_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161582820_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:8)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:30:04 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (1.0ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2155795820_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2155795820_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:40:34 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162319420_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162319420_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:8)
+Rendered fotos/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 16ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:41:09 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161203620_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161203620_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 16:41:15 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"bla"}, "commit"=>"Save Foto"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "fotos" ("name", "created_at", "updated_at") VALUES ('bla', '2011-02-16 18:41:15.895044', '2011-02-16 18:41:15.895044')
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160657400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160657400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 95ms (Views: 9.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 16:41:22 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"bla"}, "commit"=>"Save Foto"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "fotos" ("name", "created_at", "updated_at") VALUES ('bla', '2011-02-16 18:41:22.609740', '2011-02-16 18:41:22.609740')[0m
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161819940_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161819940_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 30ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 16:45:31 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"bla"}, "commit"=>"Save Foto"}
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "fotos" ("name", "created_at", "updated_at") VALUES ('bla', '2011-02-16 18:45:31.913850', '2011-02-16 18:45:31.913850')
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162712500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162712500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 54ms (Views: 8.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:45:41 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161916320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161916320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160922860_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160922860_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162388860_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162388860_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161588240_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161588240_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2155757140_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2155757140_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162496160_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162496160_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161709480_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161709480_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160788040_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160788040_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:46:09 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162542320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162542320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:47:06 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161689860_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161689860_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:47:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160753660_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160753660_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:47:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162471460_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162471460_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:47:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161678320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161678320_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:47:07 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160755040_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160755040_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:47:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162518240_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162518240_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:47:08 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161724040_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161724040_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:17 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160751080_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160751080_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:18 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162443480_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162443480_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:18 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161646820_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161646820_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:19 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160699500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160699500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:19 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162501500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162501500_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:7)
+Rendered fotos/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:29 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161701400_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:29 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160781800_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:30 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162550200_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:31 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161756700_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:31 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160843680_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:48:32 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2162640100_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:49:36 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161792860_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:49:36 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2160856520_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 16:52:34 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (750.4ms)
+Rendered fotos/new.html.erb within layouts/application (752.5ms)
+Completed   in 757ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2162531720_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2162563440_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2162563440_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:07:00 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+Rendered fotos/new.html.erb within layouts/application (2.7ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2161169700_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2161212460_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2161212460_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:07:04 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+Rendered fotos/new.html.erb within layouts/application (3.0ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2152861900_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2153306360_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2153306360_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:07:05 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+Rendered fotos/new.html.erb within layouts/application (3.1ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2162015580_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2162040000_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2162040000_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:07:05 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+Rendered fotos/new.html.erb within layouts/application (2.8ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2160837320_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2160862040_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2160862040_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.8ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:07:05 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+Rendered fotos/new.html.erb within layouts/application (2.8ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2162660920_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2162688880_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2162688880_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:07:05 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+Rendered fotos/new.html.erb within layouts/application (2.8ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2161665700_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2161697480_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2161697480_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:07:05 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+Rendered fotos/new.html.erb within layouts/application (2.9ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2155397980_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2155477160_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2155477160_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (29.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (35.0ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateFotos (20110216171052)
+Migrating to AddImagemToFoto (20110216190307)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1mALTER TABLE "fotos" ADD "imagem_file_name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "fotos" ADD "imagem_content_type" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "fotos" ADD "imagem_file_size" integer[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "fotos" ADD "imagem_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110216190307')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("foto")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("fotos")
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:11:29 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.7ms)
+Rendered fotos/new.html.erb within layouts/application (2.9ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `file_field' for nil:NilClass):
+    1: Name: <%= f.text_field :name%>  
+    2: <%= form.file_field :imagem%>
+    3: <%= f.submit    %>              
+  app/views/fotos/_form.html.erb:2:in `_app_views_fotos__form_html_erb___2100318656078273889_2162326160_1781538804509449217'
+  app/views/fotos/new.html.erb:2:in `block in _app_views_fotos_new_html_erb__2375797465945539858_2162360200_3531906360981969287'
+  app/views/fotos/new.html.erb:1:in `_app_views_fotos_new_html_erb__2375797465945539858_2162360200_3531906360981969287'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:11:55 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__2375797465945539858_2161310960_3531906360981969287 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:12:14 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000100e559b0 @original_filename="caracol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"caracol.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-36090-1uuvbl9>>}, "commit"=>"Save Foto"}
+Completed   in 44ms
+
+NoMethodError (undefined method `to_tempfile' for #<ActionDispatch::Http::UploadedFile:0x00000100e559b0>):
+  app/controllers/fotos_controller.rb:14:in `new'
+  app/controllers/fotos_controller.rb:14:in `create'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:17:59 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000100e36ce0 @original_filename="caracol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"caracol.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-36515-1mcevz6>>}, "commit"=>"Save Foto"}
+Completed   in 44ms
+
+NoMethodError (undefined method `to_tempfile' for #<ActionDispatch::Http::UploadedFile:0x00000100e36ce0>):
+  app/controllers/fotos_controller.rb:14:in `new'
+  app/controllers/fotos_controller.rb:14:in `create'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-16 17:18:04 -0200
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:18:08 -0200
+  Processing by FotosController#index as HTML
+Rendered fotos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:18:18 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (3.1ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__3346269737339909753_2161685880_1798215065672140893 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:18:32 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"Caracol", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000101cd1660 @original_filename="caracol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"caracol.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-36515-1wk1bt0>>}, "commit"=>"Save Foto"}
+Completed   in 17ms
+
+NoMethodError (undefined method `to_tempfile' for #<ActionDispatch::Http::UploadedFile:0x00000101cd1660>):
+  app/controllers/fotos_controller.rb:14:in `new'
+  app/controllers/fotos_controller.rb:14:in `create'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:21:26 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"Caracol", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000100e18038 @original_filename="caracol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"caracol.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-36552-1wk76f0>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-36552-iz060w.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::CommandNotFoundError: Paperclip::CommandNotFoundError>
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-36552-iz060w.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::CommandNotFoundError: Paperclip::CommandNotFoundError>
+Rendered fotos/_form.html.erb (3.6ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__3507323802088193375_2154315080_1045703627448509217 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 551ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:21:43 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"lagartinho", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000101d3b920 @original_filename="lagartinho.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"lagartinho.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-36552-w3ekuw>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-36552-1wblkz5.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::CommandNotFoundError: Paperclip::CommandNotFoundError>
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-36552-1wblkz5.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::CommandNotFoundError: Paperclip::CommandNotFoundError>
+Rendered fotos/_form.html.erb (1.1ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb__3507323802088193375_2163022720_1045703627448509217 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 75ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+  [1m[36mFoto Load (1.6ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+  [1m[35mFoto Load (0.7ms)[0m  SELECT "fotos".* FROM "fotos" ORDER BY fotos.id DESC LIMIT 1
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:27:33 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (3.0ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb___2526943904927380859_2159816380__801032017163193017 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:27:57 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"lalala", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x000001017f2f40 @original_filename="centopeia.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"centopeia.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-37033-1pdhr8v>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-37033-9ersv2.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::CommandNotFoundError: Paperclip::CommandNotFoundError>
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-37033-9ersv2.jpg[0]' 2>/dev/null
+[paperclip] An error was received while processing: #<Paperclip::CommandNotFoundError: Paperclip::CommandNotFoundError>
+Rendered fotos/_form.html.erb (1.4ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb___2526943904927380859_2157837460__801032017163193017 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 56ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:51:04 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (2.9ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb___1515836197206877800_2173082560__4003700624560005984 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:51:17 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"rachad", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x000001031427e8 @original_filename="carinhas contentes.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"carinhas contentes.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-99311-7l6g39>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-nsdexm.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-nsdexm.jpg[0]' -resize "300x300>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-nsdexm20110216-99311-cry4bm' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-nsdexm.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-nsdexm.jpg[0]' -resize "100x100>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-nsdexm20110216-99311-1wcaxt3' 2>/dev/null
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "fotos" ("name", "created_at", "updated_at", "imagem_file_name", "imagem_content_type", "imagem_file_size", "imagem_updated_at") VALUES ('rachad', '2011-02-16 19:51:17.490013', '2011-02-16 19:51:17.490013', 'carinhas contentes.jpg', 'image/jpeg', 53391, '2011-02-16 19:51:17.151803')
+[paperclip] Saving attachments.
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/5/original/carinhas contentes.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/5/medium/carinhas contentes.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/5/thumb/carinhas contentes.jpg
+Rendered fotos/_form.html.erb (1.2ms)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_fotos_new_html_erb___1515836197206877800_2157243120__4003700624560005984 at /Users/luciannaalmeida/Projetos/primeiro/app/views/fotos/new.html.erb:1)
+Rendered fotos/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 519ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:52:15 -0200
+  Processing by FotosController#index as HTML
+Rendered fotos/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:52:23 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+Rendered fotos/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 17:52:37 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"lu", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000103252bb0 @original_filename="despicable3.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"despicable3.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-99311-1kqsb76>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1u9q4g2.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1u9q4g2.jpg[0]' -resize "300x300>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1u9q4g220110216-99311-1indhtg' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1u9q4g2.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1u9q4g2.jpg[0]' -resize "100x100>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1u9q4g220110216-99311-1iy12zl' 2>/dev/null
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO "fotos" ("name", "created_at", "updated_at", "imagem_file_name", "imagem_content_type", "imagem_file_size", "imagem_updated_at") VALUES ('lu', '2011-02-16 19:52:38.237753', '2011-02-16 19:52:38.237753', 'despicable3.jpg', 'image/jpeg', 417823, '2011-02-16 19:52:37.891208')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/6/original/despicable3.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/6/medium/despicable3.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/6/thumb/despicable3.jpg
+Rendered fotos/_form.html.erb (1.2ms)
+Rendered fotos/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 419ms (Views: 11.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:57:41 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (2.6ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 18ms (Views: 5.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:57:43 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (2.6ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 5.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:57:44 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (2.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 5.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:57:45 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (2.2ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 5.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:57:45 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (2.1ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 5.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-16 17:57:46 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (2.4ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 17ms (Views: 5.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 17:58:00 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (2.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 16ms (Views: 5.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 17:58:18 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (2.2ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (14.2ms)
+Completed   in 28ms
+
+ActionView::Template::Error (can't convert Paperclip::Attachment into String):
+    1: <h1>Album</h1> 
+    2: <%@fotos.each do |foto|%>
+    3: <p><%= image_tag(foto.imagem)%></p>
+    4: <%end%>
+    5:                                                   
+  app/views/fotos/index.html.erb:3:in `block in _app_views_fotos_index_html_erb__1673403863937952795_2157716060__4003700624560005984'
+  app/views/fotos/index.html.erb:2:in `each'
+  app/views/fotos/index.html.erb:2:in `_app_views_fotos_index_html_erb__1673403863937952795_2157716060__4003700624560005984'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 17:58:36 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (2.1ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 29ms (Views: 18.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/imagems/original/missing.png" for 127.0.0.1 at 2011-02-16 17:58:36 -0200
+
+ActionController::RoutingError (No route matches "/imagems/original/missing.png"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/imagems/original/missing.png" for 127.0.0.1 at 2011-02-16 17:58:36 -0200
+
+ActionController::RoutingError (No route matches "/imagems/original/missing.png"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+  [1m[36mAREL (2.7ms)[0m  [1mDELETE FROM "fotos" WHERE 1=1[0m
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 17:59:30 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.4ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 14ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-16 17:59:55 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (0.8ms)
+Rendered fotos/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 18:00:03 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"bla", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000103270570 @original_filename="Despicable-me.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"Despicable-me.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-99311-xeikus>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-vwqr2t.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-vwqr2t.jpg[0]' -resize "300x300>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-vwqr2t20110216-99311-12b00ty' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-vwqr2t.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-vwqr2t.jpg[0]' -resize "100x100>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-vwqr2t20110216-99311-1pvkssw' 2>/dev/null
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "fotos" ("name", "created_at", "updated_at", "imagem_file_name", "imagem_content_type", "imagem_file_size", "imagem_updated_at") VALUES ('bla', '2011-02-16 20:00:04.056767', '2011-02-16 20:00:04.056767', 'Despicable-me.jpg', 'image/jpeg', 109290, '2011-02-16 20:00:03.757542')
+[paperclip] Saving attachments.
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/7/original/Despicable-me.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/7/medium/Despicable-me.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/7/thumb/Despicable-me.jpg
+Rendered fotos/_form.html.erb (1.6ms)
+Rendered fotos/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 359ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 18:00:14 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"rachad", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x000001032003b0 @original_filename="centopeia.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"centopeia.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-99311-ugo5hx>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1vp00k8.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1vp00k8.jpg[0]' -resize "300x300>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1vp00k820110216-99311-1aq8lyq' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1vp00k8.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1vp00k8.jpg[0]' -resize "100x100>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-1vp00k820110216-99311-1ny72uz' 2>/dev/null
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "fotos" ("name", "created_at", "updated_at", "imagem_file_name", "imagem_content_type", "imagem_file_size", "imagem_updated_at") VALUES ('rachad', '2011-02-16 20:00:14.720810', '2011-02-16 20:00:14.720810', 'centopeia.jpg', 'image/jpeg', 139929, '2011-02-16 20:00:14.461527')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/8/original/centopeia.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/8/medium/centopeia.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/8/thumb/centopeia.jpg
+Rendered fotos/_form.html.erb (1.1ms)
+Rendered fotos/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 353ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fotos" for 127.0.0.1 at 2011-02-16 18:00:28 -0200
+  Processing by FotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WQGi8Ugni9THQ+742AvHwy8GPyDtaYkvfRbvonyx01g=", "foto"=>{"name"=>"oi", "imagem"=>#<ActionDispatch::Http::UploadedFile:0x00000103086570 @original_filename="caracol.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"foto[imagem]\"; filename=\"caracol.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/RackMultipart20110216-99311-zutmsf>>}, "commit"=>"Save Foto"}
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-apu58y.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-apu58y.jpg[0]' -resize "300x300>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-apu58y20110216-99311-19rza74' 2>/dev/null
+[paperclip] identify -format %wx%h '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-apu58y.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-apu58y.jpg[0]' -resize "100x100>" '/var/folders/XH/XH4cBdEGE0W59NuErOERdU+++TI/-Tmp-/stream20110216-99311-apu58y20110216-99311-12jh9c3' 2>/dev/null
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "fotos" ("name", "created_at", "updated_at", "imagem_file_name", "imagem_content_type", "imagem_file_size", "imagem_updated_at") VALUES ('oi', '2011-02-16 20:00:28.506984', '2011-02-16 20:00:28.506984', 'caracol.jpg', 'image/jpeg', 39345, '2011-02-16 20:00:28.271240')
+[paperclip] Saving attachments.
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/9/original/caracol.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/9/medium/caracol.jpg
+[paperclip] saving /Users/luciannaalmeida/Projetos/primeiro/public/system/imagems/9/thumb/caracol.jpg
+Rendered fotos/_form.html.erb (0.9ms)
+Rendered fotos/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 330ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:00:33 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.6ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 29ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:07:31 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.5ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 27ms (Views: 17.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fotos/1" for 127.0.0.1 at 2011-02-16 18:07:44 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFoto Load (0.2ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 1 LIMIT 1[0m
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find Foto with ID=1):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/fotos/rachad" for 127.0.0.1 at 2011-02-16 18:08:29 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"rachad"}
+Completed   in 8ms
+
+ActiveRecord::RecordNotFound (Couldn't find Foto without an ID):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started GET "/fotos/rachad" for 127.0.0.1 at 2011-02-16 18:14:13 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"rachad"}
+  [1m[35mFoto Load (0.1ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 0 LIMIT 1
+Completed   in 11ms
+
+ActiveRecord::RecordNotFound (Couldn't find Foto with ID=rachad):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/fotos/rachad" for 127.0.0.1 at 2011-02-16 18:14:25 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"rachad"}
+  [1m[36mFoto Load (0.2ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 0 LIMIT 1[0m
+Completed   in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find Foto with ID=rachad):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/fotos/rachad" for 127.0.0.1 at 2011-02-16 18:14:27 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"rachad"}
+  [1m[35mFoto Load (0.1ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 0 LIMIT 1
+Completed   in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find Foto with ID=rachad):
+  app/controllers/fotos_controller.rb:7:in `show'
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:14:35 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.6ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 56ms (Views: 18.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:14:40 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.5ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:14:56 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.5ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 28ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-16 18:15:08 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mFoto Load (0.2ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1
+Completed   in 15ms
+
+ActionView::MissingTemplate (Missing template fotos/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-16 18:15:31 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFoto Load (0.2ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1[0m
+Completed   in 21ms
+
+ActionView::MissingTemplate (Missing template fotos/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-16 18:15:31 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mFoto Load (0.2ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1
+Completed   in 15ms
+
+ActionView::MissingTemplate (Missing template fotos/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/luciannaalmeida/Projetos/primeiro/app/views"):
+  
+
+Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-16 18:19:41 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFoto Load (0.2ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1[0m
+Rendered fotos/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 27ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-16 18:23:01 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mFoto Load (0.2ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1
+Rendered fotos/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 54ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/8" for 127.0.0.1 at 2011-02-16 18:23:04 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mFoto Load (0.2ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 8 LIMIT 1[0m
+Rendered fotos/show.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 54ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:23:20 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.4ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 27ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:23:26 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.5ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 27ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:23:33 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.5ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 55ms (Views: 18.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-16 18:23:37 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFoto Load (0.2ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1[0m
+Rendered fotos/show.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 54ms (Views: 42.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/8" for 127.0.0.1 at 2011-02-16 18:23:41 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mFoto Load (0.2ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 8 LIMIT 1
+Rendered fotos/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 27ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-16 18:24:07 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFoto Load (0.2ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1[0m
+Rendered fotos/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 26ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-16 18:24:42 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.4ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (42.5ms)
+Completed 200 OK in 56ms (Views: 46.6ms | ActiveRecord: 0.4ms)
