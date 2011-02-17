@@ -2117,3 +2117,34 @@ Errno::ENOENT (No such file or directory - /Users/luciannaalmeida/Projetos/prime
 Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
 Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
 Rendered /Users/luciannaalmeida/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-17 13:39:14 -0200
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 13:39:20 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.6ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 68ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-17 13:39:25 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFoto Load (0.1ms)[0m  [1mSELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1[0m
+Rendered fotos/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 20ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 13:41:11 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.3ms)
