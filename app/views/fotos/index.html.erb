@@ -1,5 +1,6 @@
-<h1>Album</h1> 
+<h1>Album</h1>
 <%@fotos.each do |foto|%>
 <p><%= link_to image_tag(foto.imagem.url(:medium), :border=>0), foto_path(foto)%></p>
 <%end%>
-                                                  
+<%= will_paginate @fotos%>
+

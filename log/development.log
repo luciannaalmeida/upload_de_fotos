@@ -2148,3 +2148,613 @@ Started GET "/fotos" for 127.0.0.1 at 2011-02-17 13:41:11 -0200
   [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
 Rendered fotos/index.html.erb within layouts/application (9.9ms)
 Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:56:54 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000034ffad0>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:20 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 7ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002e73950>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:21 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 28ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000035005e8>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:21 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002f78530>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:21 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 7ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002b1f7e0>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.2ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.5ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:21 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000031ff128>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:22 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002d45f10>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:23 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 28ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000034feab8>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 14:58:24 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002f79d40>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos/new" for 127.0.0.1 at 2011-02-17 14:58:31 -0200
+  Processing by FotosController#new as HTML
+Rendered fotos/_form.html.erb (1.7ms)
+Rendered fotos/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/fotos/7" for 127.0.0.1 at 2011-02-17 14:58:49 -0200
+  Processing by FotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mFoto Load (0.1ms)[0m  SELECT "fotos".* FROM "fotos" WHERE "fotos"."id" = 7 LIMIT 1
+Rendered fotos/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 19ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-17 14:58:54 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 27ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002bf4eb8>):
+  app/controllers/fotos_controller.rb:5:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-17 15:06:49 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002f6b178>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-17 15:06:50 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x0000000248d0d0>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.3ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.6ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-17 15:06:50 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000003225210>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos/" for 127.0.0.1 at 2011-02-17 15:06:50 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 7ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002d28960>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:06:53 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 29ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000034131a8>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:12 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002f58f00>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:13 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000024eb608>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (21.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.5ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:13 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000031dac10>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:13 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002d04a88>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:13 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000033fe028>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:50 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002f28210>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:51 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002408dd0>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:51 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000031c5b08>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:08:51 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002cea048>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.4ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:09:04 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 19ms (Views: 12.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:09:43 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.3ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (44.9ms)
+Completed   in 53ms
+
+ActionView::Template::Error (undefined method `will_paginate' for #<#<Class:0x00000002c25bd0>:0x00000002c1c0a8>):
+    3: <p><%= link_to image_tag(foto.imagem.url(:medium), :border=>0), foto_path(foto)%></p>
+    4: <%end%>
+    5: 
+    6: <%= will_paginate @fotos%>
+  app/views/fotos/index.html.erb:6:in `_app_views_fotos_index_html_erb___1990774330131112075_23097160__398760678572325377'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:10:08 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:10:29 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000031d3cf8>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:14:04 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 7ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002caf498>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:14:06 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000033ffb30>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:14:07 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x00000002f37058>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:14:24 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000023d72d0>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.6ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:14:24 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 8ms
+
+NoMethodError (undefined method `paginate' for #<Class:0x000000031bf6b8>):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:16:13 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.4ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Completed   in 33ms
+
+TypeError (can't convert nil into Array):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:16:44 -0200
+  Processing by FotosController#index as HTML
+Completed   in 5ms
+
+ArgumentError (parameter hash expected):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (21.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:16:55 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Completed   in 6ms
+
+TypeError (can't convert nil into Array):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.1ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:16:56 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.3ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Completed   in 6ms
+
+TypeError (can't convert nil into Array):
+  app/controllers/fotos_controller.rb:4:in `index'
+
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/lucianna/.rvm/gems/ruby-1.9.2-p136@global/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:17:07 -0200
+  Processing by FotosController#index as HTML
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 40ms (Views: 33.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fotos" for 127.0.0.1 at 2011-02-17 15:17:48 -0200
+  Processing by FotosController#index as HTML
+  [1m[36mFoto Load (0.3ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fotos?page=2" for 127.0.0.1 at 2011-02-17 15:17:50 -0200
+  Processing by FotosController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 18ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fotos?page=1" for 127.0.0.1 at 2011-02-17 15:17:52 -0200
+  Processing by FotosController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mFoto Load (0.3ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fotos?page=2" for 127.0.0.1 at 2011-02-17 15:17:57 -0200
+  Processing by FotosController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mFoto Load (0.3ms)[0m  SELECT "fotos".* FROM "fotos"
+Rendered fotos/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fotos?page=1" for 127.0.0.1 at 2011-02-17 15:17:59 -0200
+  Processing by FotosController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36mFoto Load (0.3ms)[0m  [1mSELECT "fotos".* FROM "fotos"[0m
+Rendered fotos/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 0.3ms)
